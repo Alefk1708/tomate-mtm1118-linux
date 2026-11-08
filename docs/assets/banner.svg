@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">Tomate MTM-1118 para Linux</title>
+  <desc id="desc">Mesa digitalizadora e caneta: tela USB, pressão e calibração no desktop Linux.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#0b1222"/><stop offset="1" stop-color="#17243c"/></linearGradient>
+    <linearGradient id="screen" x2="1" y2="1"><stop stop-color="#153744"/><stop offset=".52" stop-color="#263764"/><stop offset="1" stop-color="#383163"/></linearGradient>
+    <linearGradient id="ink" x2="1" y2=".3"><stop stop-color="#34d399"/><stop offset="1" stop-color="#38bdf8"/></linearGradient>
+    <linearGradient id="pen" x2="1" y2="1"><stop stop-color="#ccd7e6"/><stop offset=".48" stop-color="#7b8aa4"/><stop offset="1" stop-color="#394960"/></linearGradient>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#90a9cb" stroke-opacity=".07"/></pattern>
+  </defs>
+  <rect width="1200" height="420" rx="24" fill="url(#bg)"/>
+  <rect width="1200" height="420" rx="24" fill="url(#grid)"/>
+  <circle cx="1110" cy="40" r="190" fill="#38bdf8" opacity=".045"/>
+  <circle cx="810" cy="390" r="200" fill="#a78bfa" opacity=".04"/>
+  <rect x="60" y="57" width="150" height="28" rx="14" fill="#34d399" fill-opacity=".13" stroke="#34d399" stroke-opacity=".4"/>
+  <circle cx="76" cy="71" r="4" fill="#34d399"/>
+  <text x="89" y="76" fill="#a7f3d0" font-family="DejaVu Sans,Arial,sans-serif" font-size="12" font-weight="bold" letter-spacing="2">LINUX NATIVO</text>
+  <text x="58" y="151" fill="#f0f6ff" font-family="DejaVu Sans,Arial,sans-serif" font-size="51" font-weight="bold" letter-spacing="-1.5">Tomate MTM-1118</text>
+  <text x="61" y="198" fill="#adc4e3" font-family="DejaVu Sans,Arial,sans-serif" font-size="23">Sua mesa. Seu Linux. Seu traço.</text>
+  <rect x="61" y="225" width="62" height="4" rx="2" fill="url(#ink)"/>
+  <text x="61" y="266" fill="#93abc9" font-family="DejaVu Sans,Arial,sans-serif" font-size="16">Tela USB integrada ao desktop.</text>
+  <text x="61" y="293" fill="#93abc9" font-family="DejaVu Sans,Arial,sans-serif" font-size="16">Caneta, pressão e calibração de quatro pontos.</text>
+  <g font-family="DejaVu Sans,Arial,sans-serif" font-size="12" fill="#c4d4ec" text-anchor="middle">
+    <rect x="61" y="333" width="106" height="30" rx="8" fill="#ffffff" fill-opacity=".055" stroke="#ffffff" stroke-opacity=".1"/>
+    <text x="114" y="352">DRM / EVDI</text>
+    <rect x="177" y="333" width="112" height="30" rx="8" fill="#ffffff" fill-opacity=".055" stroke="#ffffff" stroke-opacity=".1"/>
+    <text x="233" y="352">USB + uinput</text>
+    <rect x="299" y="333" width="160" height="30" rx="8" fill="#ffffff" fill-opacity=".055" stroke="#ffffff" stroke-opacity=".1"/>
+    <text x="379" y="352">Pop!_OS · COSMIC</text>
+  </g>
+  <g transform="translate(656 81) rotate(-6 215 130)">
+    <rect x="-7" y="9" width="448" height="280" rx="27" fill="#050914" opacity=".55"/>
+    <rect width="432" height="270" rx="23" fill="#0b1423" stroke="#41536d" stroke-width="2"/>
+    <rect x="21" y="20" width="390" height="230" rx="9" fill="url(#screen)"/>
+    <path d="M36 203 C94 224 90 80 155 104 S215 238 275 156 S332 61 397 83" fill="none" stroke="#38bdf8" stroke-opacity=".1" stroke-width="26" stroke-linecap="round"/>
+    <path d="M36 203 C94 224 90 80 155 104 S215 238 275 156 S332 61 397 83" fill="none" stroke="url(#ink)" stroke-width="6" stroke-linecap="round"/>
+    <g stroke="#a7c4ea" stroke-width="1.5" opacity=".6"><path d="M40 44H60 M50 34V54 M372 44H392 M382 34V54 M40 226H60 M50 216V236 M372 226H392 M382 216V236"/></g>
+    <circle cx="216" cy="260" r="2" fill="#34d399"/>
+    <rect x="360" y="164" width="39" height="62" rx="6" fill="#0b1423" opacity=".7"/>
+    <path d="M369 211V201 M379 211V190 M389 211V177" stroke="#38bdf8" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(1009 72) rotate(29)">
+    <rect width="16" height="190" rx="8" fill="url(#pen)" stroke="#a1b0c8" stroke-width=".7"/>
+    <rect x="5" y="98" width="6" height="29" rx="3" fill="#26364e"/>
+    <path d="M0 181L8 208L16 181" fill="#64748b"/>
+    <path d="M5 199L8 210L11 199" fill="#d8e9f7"/>
+  </g>
+</svg>

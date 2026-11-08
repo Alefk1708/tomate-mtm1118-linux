@@ -1,0 +1,14 @@
+[Unit]
+Description=Tomate MTM-1118 Userspace Stylus Pen & ExpressKeys Driver (Bosto Port)
+After=systemd-udevd.service
+
+[Service]
+Type=simple
+ExecStartPre=-/sbin/modprobe uinput
+ExecStart=/usr/bin/python3 /opt/tomate-mtm1118/userspace-pen/tomate_pen_driver.py
+Restart=always
+RestartSec=2
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target

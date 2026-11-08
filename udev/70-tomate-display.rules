@@ -1,0 +1,4 @@
+# uaccess must be assigned before 73-seat-late.rules applies active-seat ACLs.
+# MI_00 is claimed by the driver; the mass-storage interface is not claimed.
+SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTR{idVendor}=="33c3", ATTR{idProduct}=="0e02", MODE="0660", TAG+="uaccess"
+SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTR{idVendor}=="33c3", ATTR{idProduct}=="0e01", MODE="0660", TAG+="uaccess"

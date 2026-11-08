@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Instalar Mesa Tomate MTM-1118
+Comment=Instalar ou atualizar a segunda tela e a caneta
+Exec=/usr/bin/python3 -c "import os,sys,urllib.parse; p=urllib.parse.urlparse(sys.argv[1]); f=urllib.parse.unquote(p.path) if p.scheme=='file' else sys.argv[1]; os.execv('/bin/bash',['bash',os.path.join(os.path.dirname(os.path.abspath(f)),'Instalar.sh')])" %k
+Icon=system-software-install
+Terminal=true
+Categories=System;
+StartupNotify=false

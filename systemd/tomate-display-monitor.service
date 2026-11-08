@@ -1,0 +1,18 @@
+[Unit]
+Description=Tomate MTM-1118 native DRM monitor via EVDI and ArtInChip USB
+After=systemd-udevd.service display-manager.service
+Conflicts=tomate-display.service tomate-desktop.service
+
+[Service]
+Type=notify
+NotifyAccess=main
+TimeoutStartSec=90
+ExecStartPre=/sbin/modprobe evdi
+ExecStart=/usr/bin/python3 /opt/tomate-mtm1118/display-driver/tomate_display_driver.py --source drm --fps 60 --once
+Restart=on-failure
+RestartPreventExitStatus=78
+RestartSec=5
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=graphical.target
