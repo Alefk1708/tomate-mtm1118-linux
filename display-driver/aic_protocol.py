@@ -1,3 +1,6 @@
+# Copyright 2026 Alefk1708
+# SPDX-License-Identifier: Apache-2.0
+# See LICENSE, NOTICE and THIRD_PARTY_NOTICES.md for scope and attribution.
 """ArtInChip wire protocol reconstructed from the shipped Windows DLL.
 
 See ../README.md for addresses, evidence, and remaining unknowns.

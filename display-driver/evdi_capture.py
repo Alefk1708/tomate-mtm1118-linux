@@ -1,3 +1,6 @@
+# Copyright 2026 Alefk1708
+# SPDX-License-Identifier: Apache-2.0
+# See LICENSE, NOTICE and THIRD_PARTY_NOTICES.md for scope and attribution.
 """Native DRM monitor bridge using the public libevdi 1.14/1.15 ABI.
 
 Requires a compatible evdi kernel module. It does not capture the desktop:

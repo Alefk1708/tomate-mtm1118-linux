@@ -1,3 +1,6 @@
+# Copyright 2026 Alefk1708
+# SPDX-License-Identifier: Apache-2.0
+# See LICENSE, NOTICE and THIRD_PARTY_NOTICES.md for scope and attribution.
 # Only this port's virtual pen: hover/side buttons are forced to pressure zero.
 # Avoid applying libinput's additional 5% tip threshold to already gated force.
 [Tomate MTM-1118 virtual pen pressure]

@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Copyright 2026 Alefk1708
+# SPDX-License-Identifier: Apache-2.0
+# See LICENSE, NOTICE and THIRD_PARTY_NOTICES.md for scope and attribution.
 # Remove installed programs and services; preserve configuration and drawings.
 set -euo pipefail
 if [ "$EUID" -ne 0 ]; then echo 'Execute: sudo bash uninstall.sh'; exit 1; fi

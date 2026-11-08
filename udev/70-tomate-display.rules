@@ -1,3 +1,6 @@
+# Copyright 2026 Alefk1708
+# SPDX-License-Identifier: Apache-2.0
+# See LICENSE, NOTICE and THIRD_PARTY_NOTICES.md for scope and attribution.
 # uaccess must be assigned before 73-seat-late.rules applies active-seat ACLs.
 # MI_00 is claimed by the driver; the mass-storage interface is not claimed.
 SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTR{idVendor}=="33c3", ATTR{idProduct}=="0e02", MODE="0660", TAG+="uaccess"

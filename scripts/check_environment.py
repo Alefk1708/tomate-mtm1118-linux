@@ -1,3 +1,6 @@
+# Copyright 2026 Alefk1708
+# SPDX-License-Identifier: Apache-2.0
+# See LICENSE, NOTICE and THIRD_PARTY_NOTICES.md for scope and attribution.
 """Read-only Linux deployment preflight; never loads a module or opens a GPU."""
 import argparse
 import ctypes

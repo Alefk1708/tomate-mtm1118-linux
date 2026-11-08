@@ -1,0 +1,25 @@
+Tomate MTM-1118 Linux
+Copyright 2026 Alefk1708
+
+Project creator and maintainer: Alefk1708
+Original project: https://github.com/Alefk1708/tomate-mtm1118-linux
+
+This project provides an independent Linux port for the Tomate MTM-1118
+USB pen display, including display transport, pen input, calibration,
+configuration tools and installation integration.
+
+The original project code, documentation and repository banner are provided
+under the Apache License, Version 2.0. See LICENSE.
+
+The images and copyright notice under gui/assets were obtained from the
+original Windows driver package supplied for development. These third-party
+materials are not relicensed under the project's Apache License. Their
+existing notices and the rights of their respective owners are retained.
+See THIRD_PARTY_NOTICES.md.
+
+This project is independent and is not endorsed by the manufacturers or
+third-party projects mentioned in its documentation.
+
+This NOTICE contains attribution information and does not modify the
+Apache License. Applicable attribution notices must be preserved when
+redistributing derivative works as described in Section 4 of LICENSE.

@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# Copyright 2026 Alefk1708
+# SPDX-License-Identifier: Apache-2.0
+# See LICENSE, NOTICE and THIRD_PARTY_NOTICES.md for scope and attribution.
 """
 Interface Gráfica de Configuração e Calibração — Tomate MTM-1118 (BostoCfgTool Port)
 ====================================================================================
@@ -567,7 +570,7 @@ class AboutDialog(tk.Toplevel):
     def __init__(self, parent, logo_img=None):
         super().__init__(parent)
         self.title("Sobre")
-        self.geometry("360x230")
+        self.minsize(430, 350)
         self.resizable(False, False)
         self.transient(parent)
         self.grab_set()
@@ -579,8 +582,10 @@ class AboutDialog(tk.Toplevel):
             ttk.Label(frm, image=logo_img).pack(pady=(0, 8))
 
         ttk.Label(frm, text="Configuração de Digitalizador de Tablet", font=("Sans", 10, "bold")).pack(anchor="w")
-        ttk.Label(frm, text="Linux v2.3.11 — Tomate MTM-1118").pack(anchor="w", pady=2)
-        ttk.Label(frm, text="Copyright (C) 2016 - 2019, Bosto Co., Ltd.\nTodos os direitos reservados.", foreground="#555555").pack(anchor="w", pady=6)
+        ttk.Label(frm, text="Linux v2.3.12 — Tomate MTM-1118").pack(anchor="w", pady=2)
+        ttk.Label(frm, text="Projeto e port Linux: Alefk1708\nCopyright 2026 Alefk1708", foreground="#333333").pack(anchor="w", pady=6)
+        ttk.Label(frm, text="Apache License 2.0 — avisos em LICENSE e NOTICE\nna pasta /opt/tomate-mtm1118.", wraplength=395).pack(anchor="w", pady=4)
+        ttk.Label(frm, text="Recursos do painel original:\nCopyright (C) 2016 - 2019, Bosto Co., Ltd.\nTodos os direitos reservados.", foreground="#555555").pack(anchor="w", pady=6)
 
         ttk.Button(frm, text="OK", width=10, command=self.destroy).pack(side=tk.BOTTOM, pady=(10, 0))
 

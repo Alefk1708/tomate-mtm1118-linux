@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# Copyright 2026 Alefk1708
+# SPDX-License-Identifier: Apache-2.0
+# See LICENSE, NOTICE and THIRD_PARTY_NOTICES.md for scope and attribution.
 """Linux userspace display transport for Tomate MTM-1118 / ArtInChip.
 
 Protocol evidence and validation limits: ../README.md.

@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Copyright 2026 Alefk1708
+# SPDX-License-Identifier: Apache-2.0
+# See LICENSE, NOTICE and THIRD_PARTY_NOTICES.md for scope and attribution.
 # Opened by the portable desktop launcher in a terminal.
 set -uo pipefail
 project="$(dirname "$(readlink -f "$0")")"

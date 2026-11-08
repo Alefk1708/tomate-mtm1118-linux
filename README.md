@@ -8,12 +8,13 @@
 
 Driver independente para a **Tomate MTM-1118**, desenvolvido por engenharia reversa dos drivers Windows e integrado ao desktop por **DRM/EVDI**, **USB** e **uinput**.
 
-![Versão 2.3.11](https://img.shields.io/badge/vers%C3%A3o-2.3.11-38bdf8?style=flat-square)
+![Versão 2.3.12](https://img.shields.io/badge/vers%C3%A3o-2.3.12-38bdf8?style=flat-square)
 ![Linux nativo](https://img.shields.io/badge/plataforma-Linux_nativo-34d399?style=flat-square)
 ![Pop!_OS · COSMIC](https://img.shields.io/badge/foco-Pop!__OS_%C2%B7_COSMIC-a78bfa?style=flat-square)
 ![Em desenvolvimento](https://img.shields.io/badge/status-em_desenvolvimento-fbbf24?style=flat-square)
+[![Licença Apache 2.0](https://img.shields.io/badge/licen%C3%A7a-Apache_2.0-22c55e?style=flat-square)](LICENSE)
 
-[**Baixar o instalador**](https://github.com/Alefk1708/tomate-mtm1118-linux/releases/tag/v2.3.11) · [Instalação](#instalação) · [Calibração](#calibração) · [Como funciona](#como-funciona) · [Reportar um problema](https://github.com/Alefk1708/tomate-mtm1118-linux/issues)
+[**Baixar o instalador**](https://github.com/Alefk1708/tomate-mtm1118-linux/releases/tag/v2.3.12) · [Instalação](#instalação) · [Calibração](#calibração) · [Como funciona](#como-funciona) · [Licença e créditos](#licença-e-créditos) · [Reportar um problema](https://github.com/Alefk1708/tomate-mtm1118-linux/issues)
 
 </div>
 
@@ -37,7 +38,7 @@ A mesa usa **a mesma sessão, os mesmos programas e os mesmos arquivos do comput
 | **Painel de controle** | Interface gráfica em português, com estado da caneta e pressão em tempo real. |
 
 > [!IMPORTANT]
-> Este é um **projeto em desenvolvimento**, com validação prática no Pop!_OS. A integração DRM já foi usada para desenhar no Krita. A revisão **2.3.11** tem **39 verificações simuladas aprovadas**, mas o novo fluxo de calibração ainda precisa de confirmação física no notebook com três telas. Veja as [limitações conhecidas](#limitações-conhecidas).
+> Este é um **projeto em desenvolvimento**, com validação prática no Pop!_OS. A integração DRM já foi usada para desenhar no Krita. O fluxo da revisão **2.3.11** passou por **39 verificações simuladas**, mas ainda precisa de confirmação física no notebook com três telas. A **2.3.12** acrescenta licença e créditos, mantendo esse comportamento do driver. Veja as [limitações conhecidas](#limitações-conhecidas).
 
 ## Compatibilidade
 
@@ -64,7 +65,7 @@ Na unidade usada no desenvolvimento, a tela informa **1280 × 800 a 58 Hz**. O f
 
 ### Opção 1 · Baixar e abrir o instalador
 
-1. Na [release v2.3.11](https://github.com/Alefk1708/tomate-mtm1118-linux/releases/tag/v2.3.11), baixe **`tomate-mtm1118-linux-v2.3.11-final.tar.gz`**.
+1. Na [release v2.3.12](https://github.com/Alefk1708/tomate-mtm1118-linux/releases/tag/v2.3.12), baixe **`tomate-mtm1118-linux-v2.3.12.tar.gz`**.
 2. Extraia **o pacote inteiro** para uma pasta local.
 3. Salve os documentos abertos e conecte a mesa.
 4. Abra **`Instalar.desktop`** com duplo clique. Se o gerenciador de arquivos pedir permissão para executar o lançador, permita.
@@ -95,6 +96,7 @@ sudo ./install.sh
 - Biblioteca `libevdi` privada e arquivos do driver em `/opt/tomate-mtm1118`.
 - Serviços de imagem e caneta, regras USB, ajuste de pressão do libinput e lançadores.
 - Grupo de permissões `tomate-tablet` e associação da caneta à saída Tomate no COSMIC.
+- Licença, avisos e créditos também copiados para a pasta do programa instalado.
 - Backup dos arquivos e serviços anteriores em `/var/backups/tomate-mtm1118/final-*`.
 
 O instalador verifica os componentes EVDI antes de substituir os serviços. Se a substituição falhar, tenta restaurar os arquivos e serviços anteriores; pacotes instalados pelo `apt` e o preparo do EVDI não são desfeitos. O kernel e as opções de Secure Boot não são alterados pelo projeto.
@@ -119,7 +121,7 @@ Encerre o painel antigo pelo botão **Sair**, extraia a nova versão numa pasta 
 
 Se estiver usando um clone Git sem alterações locais, execute `git pull --ff-only` antes de instalar. As preferências existentes de pressão, calibração e botões são preservadas. A instalação reinicia os serviços da mesa, por isso salve o trabalho primeiro.
 
-Após abrir o painel novamente, confira **v2.3.11** em **Sobre**. Atualize sempre o pacote completo: painel, caneta e imagem usam o mesmo protocolo de calibração.
+Após abrir o painel novamente, confira **v2.3.12** em **Sobre**. Atualize sempre o pacote completo: painel, caneta e imagem usam o mesmo protocolo de calibração.
 
 </details>
 
@@ -254,7 +256,7 @@ Os logs de vídeo informam FPS e tempos de captura, codificação e USB. Eles **
 ## Limitações conhecidas
 
 - **Integração com o COSMIC:** houve relatos de cliques da caneta ignorados em controles do sistema, como fechar janelas, apesar do desenho funcionar nos aplicativos.
-- **Botões e contato:** ainda há relatos ocasionais de falha do botão superior e de traços com a ponta no ar. A revisão 2.3.11 preserva o comportamento de entrada escolhido durante os testes; não declara esses casos eliminados.
+- **Botões e contato:** ainda há relatos ocasionais de falha do botão superior e de traços com a ponta no ar. As revisões 2.3.11 e 2.3.12 preservam o comportamento de entrada escolhido durante os testes; não declaram esses casos eliminados.
 - **Estabilidade gráfica:** uma revisão anterior apresentou travamento com NVIDIA/COSMIC/EVDI. Testes posteriores permitiram desenhar normalmente, mas ainda falta uma matriz ampla de GPUs, kernels e aplicativos.
 - **Calibração atual:** o fluxo direto por USB foi verificado por simulação. A confirmação física da correção no notebook com três telas está pendente.
 - **Touch e outros dispositivos:** há comandos de configuração de touch no código, mas funcionamento completo de touchscreen/multitoque e de outros modelos não foi validado.
@@ -296,6 +298,23 @@ lsusb
 ```
 
 Para contribuir com código, descreva o comportamento antes/depois e diferencie testes simulados de testes na mesa física. Resultados com outros notebooks, GPUs e versões do COSMIC ajudam a ampliar a compatibilidade documentada.
+
+## Licença e créditos
+
+**Projeto e port Linux: [Alefk1708](https://github.com/Alefk1708).** Copyright 2026 Alefk1708. O código original, a documentação e o banner do repositório são disponibilizados sob a **[Apache License 2.0](LICENSE)**.
+
+A licença permite uso, cópia, modificação e redistribuição, inclusive comercial. Nas redistribuições, suas condições incluem:
+
+- Fornecer uma cópia da licença.
+- Preservar os avisos de copyright e atribuição aplicáveis ao trabalho reutilizado.
+- Identificar os arquivos modificados com avisos das alterações.
+- Manter uma cópia legível dos créditos aplicáveis do **[NOTICE](NOTICE)** em um dos locais previstos pela seção 4 da licença.
+
+Assim, outras pessoas podem contribuir e criar suas próprias versões, mantendo os avisos de origem exigidos. A licença estabelece obrigações de atribuição; não é uma barreira técnica à cópia nem uma garantia contra plágio.
+
+Veja **[AUTHORS.md](AUTHORS.md)** para a identificação do projeto e **[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)** para os recursos herdados do driver original. Esses recursos de terceiros mantêm os direitos dos respectivos titulares e **não são relicenciados como Apache 2.0**.
+
+O instalador inclui esses avisos em `/opt/tomate-mtm1118`, e a janela **Sobre** identifica o port Linux e seus créditos. Contribuições intencionalmente enviadas ao projeto seguem a seção 5 da licença, salvo indicação expressa em contrário.
 
 ## Origem e referências
 

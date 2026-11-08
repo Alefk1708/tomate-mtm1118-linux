@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Copyright 2026 Alefk1708
+# SPDX-License-Identifier: Apache-2.0
+# See LICENSE, NOTICE and THIRD_PARTY_NOTICES.md for scope and attribution.
 # Tomate MTM-1118: native DRM monitor only.
 set -Eeuo pipefail
 cd "$(dirname "$(readlink -f "$0")")"
@@ -27,7 +30,8 @@ for path in /opt/tomate-mtm1118 /opt/tomate-mtm1118/userspace-pen /opt/tomate-mt
     /opt/tomate-mtm1118/python-libs /etc/tomate-mtm1118 /etc/tomate-mtm1118/settings.json; do
     if [ -L "$path" ]; then echo "Caminho simbólico não aceito: $path"; exit 1; fi
 done
-files=(userspace-pen/tomate_pen_driver.py userspace-pen/button_schema.py userspace-pen/calibration_protocol.py gui/tomate_control_center.py
+files=(LICENSE NOTICE AUTHORS.md THIRD_PARTY_NOTICES.md
+    userspace-pen/tomate_pen_driver.py userspace-pen/button_schema.py userspace-pen/calibration_protocol.py gui/tomate_control_center.py
     display-driver/aic_protocol.py display-driver/tomate_display_driver.py display-driver/evdi_capture.py display-driver/calibration_display.py
     scripts/check_environment.py scripts/install_evdi.sh scripts/map_cosmic_pen.py
     systemd/tomate-pen.service systemd/tomate-display-monitor.service
@@ -137,6 +141,7 @@ for file in "${files[@]}"; do
     case "$file" in userspace-pen/*|display-driver/*|gui/*|scripts/*) install -m 0644 "$file" "/opt/tomate-mtm1118/$file" ;; esac
 done
 cp -a gui/assets /opt/tomate-mtm1118/gui/
+install -m 0644 LICENSE NOTICE AUTHORS.md THIRD_PARTY_NOTICES.md /opt/tomate-mtm1118/
 PYTHONPATH=/opt/tomate-mtm1118/userspace-pen python3 -B - <<'PY'
 import copy, json, os, tempfile
 from pathlib import Path
@@ -231,5 +236,5 @@ fi
 trap - ERR
 printf '\nInstalação DRM concluída. Backup: %s\n' "$backup"
 echo 'Caneta e botões restaurados ao comportamento da v2.3.7; vídeo otimizado preservado.'
-echo 'Encerre o painel antigo com Sair e reabra Mesa Tomate MTM-1118 (v2.3.11). A instalação não inclui Krita.'
+echo 'Encerre o painel antigo com Sair e reabra Mesa Tomate MTM-1118 (v2.3.12). A instalação não inclui Krita.'
 if $quirk_changed || $group_changed; then echo 'Salve o trabalho e entre novamente na sessão uma vez para carregar as permissões e o ajuste de pressão.'; fi
